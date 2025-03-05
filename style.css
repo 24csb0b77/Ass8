@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://img.freepik.com/free-photo/paper-bags-different-colors-blue-background-top-view_169016-43755.jpg');
+    background-position: center center;
+    background-attachment: fixed;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: rgb(137, 194, 32);
+    color: #e22315;
+    text-align: center;
+    padding: 30px;
+    border-bottom: 5px solid #2a1261;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.product-list, .cart {
+    padding: 30px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.product {
+    background-color: hsla(0, 84%, 48%, 0.897);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    border: 1px solid #270414;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 80%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.product img:hover {
+    transform: scale(1.1);
+}
+
+.product h3 {
+    font-size: 1.5em;
+    color: #9aa819;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 1.2em;
+    color: #e74c3c;
+}
+
+.product button {
+    background-color: #7516c4e7;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #a0ae27;
+    transform: scale(1.05);
+}
+
+.cart {
+    background-color: #050620;
+    margin-top: 30px;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart ul li {
+    background-color: #cb27da;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart ul li:last-child {
+    margin-bottom: 0;
+}
+
+#cart-total {
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+    color: #27ae60;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .products {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+
+    .product {
+        max-width: 250px;
+    }
+}
